@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "es.santiagodelgado.test1"
+        versionCode = "10"
+        version     = "1.1.0">
+ 
+    <name>Test 1</name>
+ 
+    <description>
+        La prumera aplicacion mia
+    </description>
+ 
+    <author href="http://santiagodelgado.es" email="contacto@santiagodelgado.es">
+        Santiago Delgado
+    </author>
+ 
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+ 
+</widget>
