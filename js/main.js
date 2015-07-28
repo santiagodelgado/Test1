@@ -22,6 +22,7 @@ var app = {
 	},
 
     initialize: function() {
+    	self.showAlert('Store to be Initialized', 'Info');
         this.store = new MemoryStore(function() {
 		    self.showAlert('Store Initialized', 'Info');
 		});
@@ -29,5 +30,5 @@ var app = {
     }
 
 };
-alert("Esto: oeoeoeoe");
+//alert("Esto: oeoeoeoe");
 app.initialize();
