@@ -31,5 +31,5 @@ var app = {
     }
 
 };
-//alert("Esto: oeoeoeoe");
+alert("Esto: oeoeoeoe");
 app.initialize();
