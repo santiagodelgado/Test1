@@ -31,11 +31,33 @@ var app = {
 		}
 	},
     initialize: function() {
-    	this.showAlert('Aplicacion inicializada', 'Bienvenido');
-		this.usuario='usuario';
-		this.pass='';
+    	//this.showAlert('Aplicacion inicializada', 'Bienvenido');
+		//this.usuario='usuario';
+		//this.pass='';
 
-		$('.contenido').html('<form>Usuario: <input type="text" value="test"></br>Pass: <input type="password"></form>');
+		//$('.contenido').html('<form>Usuario: <input type="text" value="test"></br>Pass: <input type="password"></form>');
+		$('.btn-primary').click(function () {
+			$.ajax({
+				url: "http://192.168.1.10/app_dev.php/mobileapp/",
+				data: {
+				    username: $('#username').val(),
+				    password: $('#password').val(),
+				},
+				type: "POST",
+				dataType: "html",
+				success: function (data) {
+				    //var result = $('<div />').append(data).find('#showresults').html();
+				    //$('#showresults').html(result);
+					$('.container').html(data);
+				},
+				error: function (xhr, status) {
+				    alert("Sorry, there was a problem!");
+				},
+				complete: function (xhr, status) {
+				    //$('#showresults').slideDown('slow')
+				}
+			});
+		});
     }
 };
 //alert("Esto: oeoeoeoe");
