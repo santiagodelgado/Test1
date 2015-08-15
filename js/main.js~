@@ -39,7 +39,7 @@ var app = {
 		$('.form-signin').submit(function (event) {
 			event.preventDefault();
 			$.ajax({
-				url: "http://192.168.1.10/app_dev.php/mobileapp/",
+				url: "http://192.168.1.10/app_dev.php/mobileapp/" + $('#username').val() + "/" + $('#password').val(),
 				data: {
 				    username: $('#username').val(),
 				    password: $('#password').val(),
@@ -50,7 +50,8 @@ var app = {
 				    //var result = $('<div />').append(data).find('#showresults').html();
 				    //$('#showresults').html(result);
 					//$('.container').html(data);
-					this.showAlert(data, 'Respuesta');
+					this.showAlert("uno", 'Respuesta');
+					//this.showAlert(data, 'Respuesta');
 				},
 				error: function (xhr, status) {
 				    alert("Sorry, there was a problem!");
