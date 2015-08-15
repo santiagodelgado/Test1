@@ -36,7 +36,8 @@ var app = {
 		//this.pass='';
 
 		//$('.contenido').html('<form>Usuario: <input type="text" value="test"></br>Pass: <input type="password"></form>');
-		$('.btn-primary').click(function () {
+		$('.form-signin').submit(function (event) {
+			event.preventDefault();
 			$.ajax({
 				url: "http://192.168.1.10/app_dev.php/mobileapp/",
 				data: {
