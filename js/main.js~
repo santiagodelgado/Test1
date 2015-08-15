@@ -37,8 +37,21 @@ var app = {
 
 		//$('.contenido').html('<form>Usuario: <input type="text" value="test"></br>Pass: <input type="password"></form>');
 		$('.form-signin').submit(function (event) {
+			var request = $.ajax({
+				type: "POST" ,
+				crossDomain: true,
+				url: "http://192.168.1.10/app_dev.php/mobileapp/a/b"
+			});
+
+			request.done(function (response, textStatus, jqXHR){
+				console.log(response);
+			});
+
+			request.fail(function (jqXHR, textStatus, errorThrown){
+				console.error("DFP Plugin Error: " + textStatus, errorThrown);
+			});
 			event.preventDefault();
-			$.ajax({
+			/*$.ajax({
 				url: "http://192.168.1.10/app_dev.php/mobileapp/" + $('#username').val() + "/" + $('#password').val(),
 				data: {
 				    username: $('#username').val(),
@@ -54,12 +67,12 @@ var app = {
 					//this.showAlert(data, 'Respuesta');
 				},
 				error: function (xhr, status) {
-				    alert("Sorry, there was a problem!");
+				    app.showAlert("Sorry, there was a problem!" + xhr, "a");
 				},
 				complete: function (xhr, status) {
 				    //$('#showresults').slideDown('slow')
 				}
-			});
+			});*/
 		});
     }
 };
