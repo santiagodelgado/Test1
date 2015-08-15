@@ -31,11 +31,11 @@ var app = {
 		}
 	},
     initialize: function() {
-    	this.showAlert('Aplicacion inicializada', 'Bienvenido');/*
+    	this.showAlert('Aplicacion inicializada', 'Bienvenido');
 		this.usuario='usuario';
 		this.pass='';
 
-		$('.contenido').html('<form>Usuario: <input type="text" value="'.this.usuario.'"></br>Pass: <input type="password"></form>');*/
+		$('.contenido').html('<form>Usuario: <input type="text" value="'.this.usuario.'"></br>Pass: <input type="password"></form>');
     }
 };
 //alert("Esto: oeoeoeoe");

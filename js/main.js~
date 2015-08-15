@@ -31,7 +31,7 @@ var app = {
 		}
 	},
     initialize: function() {
-    	self.showAlert('Aplicacion inicializada', 'Bienvenido');/*
+    	this.showAlert('Aplicacion inicializada', 'Bienvenido');/*
 		this.usuario='usuario';
 		this.pass='';
 
