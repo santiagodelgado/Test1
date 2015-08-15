@@ -13,6 +13,14 @@ var app = {
         });
     },
 
+	showAlert: function (message, title) {
+		if (navigator.notification) {
+		    navigator.notification.alert(message, null, title, 'OK');
+		} else {
+		    alert(title ? (title + ": " + message) : message);
+		}
+	},
+
     initialize: function() {
     	self.showAlert('Store to be Initialized', 'Info');
         this.store = new MemoryStore(function() {
@@ -22,21 +30,6 @@ var app = {
         //$('.search-key').on('keyup', $.proxy(this.findByName, this));
     }
 */
-
-	showAlert: function (message, title) {
-		if (navigator.notification) {
-		    navigator.notification.alert(message, null, title, 'OK');
-		} else {
-		    alert(title ? (title + ": " + message) : message);
-		}
-	},
-    initialize: function() {
-    	self.showAlert('Aplicacion inicializada', 'Bienvenido');
-		this.usuario='usuario';
-		this.pass='';
-
-		$('.contenido').html('<form>Usuario: <input type="text" value="'.this.usuario.'"></br>Pass: <input type="password"></form>');
-    }
 };
 //alert("Esto: oeoeoeoe");
 //app.initialize();
