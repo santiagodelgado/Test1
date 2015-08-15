@@ -50,6 +50,7 @@ var app = {
 				    //var result = $('<div />').append(data).find('#showresults').html();
 				    //$('#showresults').html(result);
 					//$('.container').html(data);
+					this.showAlert("uno", 'Respuesta');
 					this.showAlert(data, 'Respuesta');
 				},
 				error: function (xhr, status) {

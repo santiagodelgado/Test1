@@ -49,7 +49,8 @@ var app = {
 				success: function (data) {
 				    //var result = $('<div />').append(data).find('#showresults').html();
 				    //$('#showresults').html(result);
-					$('.container').html(data);
+					//$('.container').html(data);
+					this.showAlert(data, 'Respuesta');
 				},
 				error: function (xhr, status) {
 				    alert("Sorry, there was a problem!");
