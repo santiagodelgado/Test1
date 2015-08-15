@@ -1,16 +1,48 @@
 <html>
-<body>
-<div class='header'><h1>Inicio</h1></div>
-<div class='search-view'>
-<input class='search-key' type="text"/>
-<ul class='employee-list'></ul>
-</div>
-<div class='contenido'></div>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Proyecto fin de grado">
+    <meta name="author" content="Santiago Delgado Salmador">
 
-<script src="phonegap.js"></script>
-<script src="lib/jquery-2.1.4.min.js"></script>
-<script src="js/storage/memory-store.js"></script>
-<script src="js/main.js"></script>
+    <title>APP</title>
+
+        
+    <link href="bootstrap/signin.css" rel="stylesheet" />
+    
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+	<div class="container">
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Introduce usuario y contraseña</h2>
+        <label for="username" class="sr-only">Usuario</label>
+        <input type="email" id="username" class="form-control" placeholder="Dirección de eMail" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      </form>
+	</div>
+
+	<script src="phonegap.js"></script>
+	<script src="lib/jquery-2.1.4.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>
