@@ -35,7 +35,7 @@ var app = {
 		this.usuario='usuario';
 		this.pass='';
 
-		$('.contenido').html('<form>Usuario: <input type="text" value="test"></br>Pass: <input type="password"></form>');
+		//$('.contenido').html('<form>Usuario: <input type="text" value="test"></br>Pass: <input type="password"></form>');
     }
 };
 //alert("Esto: oeoeoeoe");
