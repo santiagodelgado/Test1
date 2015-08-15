@@ -39,5 +39,5 @@ var app = {
     }
 };
 //alert("Esto: oeoeoeoe");
+app.showAlert("prueba 1", "MiTitulo");
 app.initialize();
-//app.showAlert("prueba 1", "MiTitulo");
