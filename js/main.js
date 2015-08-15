@@ -31,8 +31,8 @@ var app = {
 		}
 	},
     initialize: function() {
-    	self.showAlert('Aplicacion inicializada', 'Bienvenido');
-		this.usuario='usuario';/*
+    	self.showAlert('Aplicacion inicializada', 'Bienvenido');/*
+		this.usuario='usuario';
 		this.pass='';
 
 		$('.contenido').html('<form>Usuario: <input type="text" value="'.this.usuario.'"></br>Pass: <input type="password"></form>');*/

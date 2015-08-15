@@ -29,15 +29,15 @@ var app = {
 		} else {
 		    alert(title ? (title + ": " + message) : message);
 		}
-	},/*
+	},
     initialize: function() {
     	self.showAlert('Aplicacion inicializada', 'Bienvenido');
-		this.usuario='usuario';
+		this.usuario='usuario';/*
 		this.pass='';
 
-		$('.contenido').html('<form>Usuario: <input type="text" value="'.this.usuario.'"></br>Pass: <input type="password"></form>');
-    }*/
+		$('.contenido').html('<form>Usuario: <input type="text" value="'.this.usuario.'"></br>Pass: <input type="password"></form>');*/
+    }
 };
 //alert("Esto: oeoeoeoe");
 app.showAlert("prueba 1", "MiTitulo");
-//app.initialize();
+app.initialize();
