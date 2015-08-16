@@ -44,7 +44,8 @@ var app = {
 			});
 
 			request.done(function (response, textStatus, jqXHR){
-				alert("bien " + response);console.log(response);
+				//alert("bien " + response);console.log(response);
+				$('.container').html(response);
 			});
 
 			request.fail(function (jqXHR, textStatus, errorThrown){
