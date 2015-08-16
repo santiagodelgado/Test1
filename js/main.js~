@@ -10,6 +10,8 @@ var app = {
 		$('.form-signin').submit(function (event) {
 			this.usuario=$('#username').val();
 			this.pass=$('#password').val();
+			usuario=$('#username').val();
+			pass=$('#password').val();
 
 			var request = $.ajax({
 				type: "POST" ,
@@ -30,7 +32,8 @@ var app = {
 		});
     },
     recargar: function() {
-		this.showAlert(this.usuario + "/" + this.pass, "Error");
+		this.showAlert(this.usuario + "/" + this.pass, "Idea");
+		this.showAlert(usuario + "/" + pass, "Idea");
 		var request = $.ajax({
 			type: "POST" ,
 			crossDomain: true,
