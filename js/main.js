@@ -19,38 +19,18 @@ var app = {
 
 			request.done(function (response, textStatus, jqXHR){
 				//alert("bien " + response);console.log(response);
-				$('.container').html(response);
+				$('.contenido').html(response);
 			});
 
 			request.fail(function (jqXHR, textStatus, errorThrown){
-				alert("Error: " + textStatus + " | " + errorThrown);//console.error("DFP Plugin Error: " + textStatus, errorThrown);
+				this.showAlert("Error: " + textStatus + " | " + errorThrown, "Error");
+				//console.error("DFP Plugin Error: " + textStatus, errorThrown);
 			});
 			event.preventDefault();
-			/*$.ajax({
-				url: "http://192.168.1.10/app_dev.php/mobileapp/" + $('#username').val() + "/" + $('#password').val(),
-				data: {
-				    username: $('#username').val(),
-				    password: $('#password').val(),
-				},
-				type: "POST",
-				dataType: "html",
-				success: function (data) {
-				    //var result = $('<div />').append(data).find('#showresults').html();
-				    //$('#showresults').html(result);
-					//$('.container').html(data);
-					this.showAlert("uno", 'Respuesta');
-					//this.showAlert(data, 'Respuesta');
-				},
-				error: function (xhr, status) {
-				    app.showAlert("Sorry, there was a problem!" + xhr, "a");
-				},
-				complete: function (xhr, status) {
-				    //$('#showresults').slideDown('slow')
-				}
-			});*/
 		});
     },
     recargar: function() {
+		this.showAlert(this.usuario + "/" + this.pass, "Error");
 		var request = $.ajax({
 			type: "POST" ,
 			crossDomain: true,
@@ -59,11 +39,12 @@ var app = {
 
 		request.done(function (response, textStatus, jqXHR){
 			//alert("bien " + response);console.log(response);
-			$('.container').html(response);
+			$('.contenido').html(response);
 		});
 
 		request.fail(function (jqXHR, textStatus, errorThrown){
-			alert("Error: " + textStatus + " | " + errorThrown);//console.error("DFP Plugin Error: " + textStatus, errorThrown);
+			this.showAlert("Error: " + textStatus + " | " + errorThrown, "Error");
+			//console.error("DFP Plugin Error: " + textStatus, errorThrown);
 		});
     }
 };

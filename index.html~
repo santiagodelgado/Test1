@@ -28,8 +28,8 @@
         <h2 class="form-signin-heading">Introduce usuario y contraseña</h2>
         <label for="username" class="sr-only">Usuario</label>
         <input type="email" id="username" class="form-control" placeholder="Dirección de eMail" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Password" required>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
       </form>
