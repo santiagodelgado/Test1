@@ -49,7 +49,7 @@ var app = {
 			});
 
 			request.fail(function (jqXHR, textStatus, errorThrown){
-				alert("mal");console.error("DFP Plugin Error: " + textStatus, errorThrown);
+				alert("Error: " + textStatus + " | " + errorThrown);//console.error("DFP Plugin Error: " + textStatus, errorThrown);
 			});
 			event.preventDefault();
 			/*$.ajax({

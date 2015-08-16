@@ -44,11 +44,12 @@ var app = {
 			});
 
 			request.done(function (response, textStatus, jqXHR){
-				alert("bien " + response);console.log(response);
+				//alert("bien " + response);console.log(response);
+				$('.container').html(response);
 			});
 
 			request.fail(function (jqXHR, textStatus, errorThrown){
-				alert("mal");console.error("DFP Plugin Error: " + textStatus, errorThrown);
+				alert("Error: " + textStatus);//console.error("DFP Plugin Error: " + textStatus, errorThrown);
 			});
 			event.preventDefault();
 			/*$.ajax({
