@@ -1,28 +1,4 @@
 var app = {
-/*
-    findByName: function() {
-        console.log('findByName');
-        this.store.findByName($('.search-key').val(), function(employees) {
-            var l = employees.length;
-            var e;
-            $('.employee-list').empty();
-            for (var i=0; i<l; i++) {
-                e = employees[i];
-                $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
-            }
-        });
-    },
-
-    initialize: function() {
-    	self.showAlert('Store to be Initialized', 'Info');
-        this.store = new MemoryStore(function() {
-		    self.showAlert('Store Initialized', 'Info');
-		});
-    	self.showAlert('Store Initialized', 'pene');
-        //$('.search-key').on('keyup', $.proxy(this.findByName, this));
-    }
-*/
-
 	showAlert: function (message, title) {
 		if (navigator.notification) {
 		    navigator.notification.alert(message, null, title, 'OK');
@@ -31,16 +7,14 @@ var app = {
 		}
 	},
     initialize: function() {
-    	//this.showAlert('Aplicacion inicializada', 'Bienvenido');
-		//this.usuario='usuario';
-		//this.pass='';
-
-		//$('.contenido').html('<form>Usuario: <input type="text" value="test"></br>Pass: <input type="password"></form>');
 		$('.form-signin').submit(function (event) {
+			this.usuario=$('#username').val();
+			this.pass=$('#password').val();
+
 			var request = $.ajax({
 				type: "POST" ,
 				crossDomain: true,
-				url: "http://192.168.1.10/app_dev.php/mobileapp/" + $('#username').val() + "/" + $('#password').val()
+				url: "http://192.168.1.10/app_dev.php/mobileapp/" + this.usuario + "/" + this.pass
 			});
 
 			request.done(function (response, textStatus, jqXHR){
@@ -74,6 +48,22 @@ var app = {
 				    //$('#showresults').slideDown('slow')
 				}
 			});*/
+		});
+    },
+    recargar: function() {
+		var request = $.ajax({
+			type: "POST" ,
+			crossDomain: true,
+			url: "http://192.168.1.10/app_dev.php/mobileapp/" + this.usuario + "/" + this.pass
+		});
+
+		request.done(function (response, textStatus, jqXHR){
+			//alert("bien " + response);console.log(response);
+			$('.container').html(response);
+		});
+
+		request.fail(function (jqXHR, textStatus, errorThrown){
+			alert("Error: " + textStatus + " | " + errorThrown);//console.error("DFP Plugin Error: " + textStatus, errorThrown);
 		});
     }
 };

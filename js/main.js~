@@ -40,7 +40,7 @@ var app = {
 			var request = $.ajax({
 				type: "POST" ,
 				crossDomain: true,
-				url: "http://192.168.1.10/app_dev.php/mobileapp/a/b"
+				url: "http://192.168.1.10/app_dev.php/mobileapp/" + $('#username').val() + "/" + $('#password').val()
 			});
 
 			request.done(function (response, textStatus, jqXHR){
