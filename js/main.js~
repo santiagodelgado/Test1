@@ -8,8 +8,8 @@ var app = {
 	},
     initialize: function() {
 		$('.form-signin').submit(function (event) {
-			this.usuario=$('#username').val();
-			this.pass=$('#password').val();
+			//this.usuario=$('#username').val();
+			//this.pass=$('#password').val();
 			usuario=$('#username').val();
 			pass=$('#password').val();
 
@@ -32,12 +32,12 @@ var app = {
 		});
     },
     recargar: function() {
-		this.showAlert(this.usuario + "/" + this.pass, "Idea");
-		this.showAlert(usuario + "/" + pass, "Idea");
+		//this.showAlert(this.usuario + "/" + this.pass, "Idea");
+		//this.showAlert(usuario + "/" + pass, "Idea");
 		var request = $.ajax({
 			type: "POST" ,
 			crossDomain: true,
-			url: "http://192.168.1.10/app_dev.php/mobileapp/" + this.usuario + "/" + this.pass
+			url: "http://192.168.1.10/app_dev.php/mobileapp/" + usuario + "/" + pass
 		});
 
 		request.done(function (response, textStatus, jqXHR){
